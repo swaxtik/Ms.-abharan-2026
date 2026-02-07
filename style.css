@@ -30,7 +30,7 @@ body {
   padding: 100px 20px;
   background:
     linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.8)),
-    url('MsAbharan.JPG') center / cover no-repeat;
+    url('Ms Abharan 1.JPG') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,7 +94,7 @@ body {
 
 /* Vertical Brand Text */
 .container::before {
-  content: 'Ms Abharan 1.JPG';
+  content: 'ABHARAN QUEEN 2026';
   position: absolute;
   left: 22px;
   top: 50%;
@@ -265,4 +265,3 @@ footer {
     font-size: 2.2rem;
   }
 }
-
