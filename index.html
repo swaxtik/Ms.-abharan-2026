@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Abharan Queen 2026 | Royal Registration</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Abharan Queen 2026 official registration. Step into elegance, confidence, and royalty." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <span class="subtitle">The Search for Elegance</span>
+    <h1>Ms. Abharan Queen Udupi | 2026</h1>
+    <p>Step into the spotlight and let your confidence shine on the grand stage.</p>
+    <a href="#apply" class="btn">Register Now</a>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section" id="apply">
+  <div class="container" data-aos="zoom-in">
+
+    <div class="form-header">
+      <h2>Participant Details</h2>
+      <p>Submit your application directly via WhatsApp.</p>
+    </div>
+
+    <form id="registrationForm">
+
+      <div class="input-group">
+        <input type="text" id="name" placeholder="Full Name *" required />
+        <input type="number" id="age" placeholder="Age *" required />
+      </div>
+
+      <select id="gender" required>
+        <option value="">Select Gender *</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Other</option>
+      </select>
+
+      <input type="tel" id="mobile" placeholder="WhatsApp Number *" required />
+      <input type="email" id="email" placeholder="Email Address (Optional)" />
+      <input type="text" id="city" placeholder="City / Location *" required />
+      <input type="url" id="social" placeholder="Instagram Profile Link (Optional)" />
+
+      <!-- LOCATION SECTION (UPDATED) -->
+      <div class="location-section">
+        <h3>Audition Location</h3>
+
+        <p class="location-text">
+          The audition will be held in <strong>Mangalore, Karnataka</strong>.<br>
+          Exact venue details will be shared with shortlisted participants.
+        </p>
+
+        <!-- Google Maps Link (Safe & Clean) -->
+        <a 
+          href="https://maps.app.goo.gl/DUiyYujAjAiDPB279"
+          target="_blank"
+          class="map-link"
+        >
+          📍 View Audition Location on Google Maps
+        </a>
+
+        <!-- OPTIONAL GOOGLE MAP EMBED (KEEP COMMENTED UNTIL NEEDED) -->
+        <!--
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        -->
+      </div>
+
+      <!-- CONSENT (UPDATED – REQUIRED & CLEAN) -->
+      <div class="consent-section">
+        <p class="consent-title">Declaration</p>
+
+        <label class="checkbox-container">
+          <input type="checkbox" id="confirmInfo" required />
+          I confirm that the above information is true
+        </label>
+
+        <label class="checkbox-container">
+          <input type="checkbox" id="contactConsent" required />
+          I agree to be contacted via Call / WhatsApp
+        </label>
+
+        <label class="checkbox-container">
+          <input type="checkbox" id="mediaConsent" required />
+          I allow the use of my photos/videos for audition evaluation updates
+        </label>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="sendToWhatsApp()">
+        Continue to WhatsApp
+      </button>
+
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Abharan Jewellery | Excellence in Grace</p>
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true });
+</script>
+<script src="script.js"></script>
+
+</body>
+</html>
