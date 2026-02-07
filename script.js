@@ -21,7 +21,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  const whatsappNumber = "6363135401";
+  const whatsappNumber = "7204651935";
 
   const locationLink = "https://maps.app.goo.gl/DUiyYujAjAiDPB279";
 
@@ -55,3 +55,4 @@ ${locationLink}
     "_blank"
   );
 }
+
