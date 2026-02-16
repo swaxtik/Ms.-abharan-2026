@@ -51,9 +51,10 @@ ${locationLink}
   `;
 
   window.open(
-    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`,
+    `https://wa.me/${9844691768}?text=${encodeURIComponent(message)}`,
     "_blank"
   );
 }
+
 
 
