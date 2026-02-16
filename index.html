@@ -35,8 +35,10 @@
 
     <div class="form-header">
       <h2>Participant Details</h2>
-      <p>Submit your application directly via WhatsApp. 
-        A Celebration of Beauty, Confidence, & Talent — Welcoming Contestants Aged 18 - 30 Years</p>
+      <p>
+        Submit your application directly via WhatsApp. <br>
+        A Celebration of Beauty, Confidence & Talent — Ages 18–30
+      </p>
     </div>
 
     <form id="registrationForm">
@@ -51,36 +53,23 @@
       <input type="text" id="city" placeholder="City / Location *" required />
       <input type="url" id="social" placeholder="Instagram Profile Link (Optional)" />
 
-      <!-- LOCATION SECTION (UPDATED) -->
+      <!-- LOCATION -->
       <div class="location-section">
         <h3>Audition Location</h3>
-
         <p class="location-text">
-          The audition will be held in <strong>Narayanaguru Auditorium, Bannanje Hall Udupi | Karnataka </strong>.<br>
+          <strong>Narayanaguru Auditorium, Bannanje Hall, Udupi – Karnataka</strong>
         </p>
 
-        <!-- Google Maps Link (Safe & Clean) -->
         <a 
           href="https://maps.app.goo.gl/DUiyYujAjAiDPB279"
           target="_blank"
           class="map-link"
         >
-          📍 View Audition Location on Google Maps
+          📍 View Location on Google Maps
         </a>
-
-        <!-- OPTIONAL GOOGLE MAP EMBED (KEEP COMMENTED UNTIL NEEDED) -->
-        <!--
-        <div class="map-container">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-        -->
       </div>
 
-      <!-- CONSENT (UPDATED – REQUIRED & CLEAN) -->
+      <!-- CONSENT -->
       <div class="consent-section">
         <p class="consent-title">Declaration</p>
 
@@ -96,7 +85,7 @@
 
         <label class="checkbox-container">
           <input type="checkbox" id="mediaConsent" required />
-          I allow the use of my photos/videos for audition evaluation updates
+          I allow use of my photos/videos for audition updates
         </label>
       </div>
 
@@ -117,7 +106,63 @@
 <script>
   AOS.init({ once: true });
 </script>
-<script src="script.js"></script>
+
+<script>
+function sendToWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const age = document.getElementById("age").value.trim();
+  const mobile = document.getElementById("mobile").value.trim();
+  const email = document.getElementById("email").value.trim() || "Not provided";
+  const city = document.getElementById("city").value.trim();
+  const social = document.getElementById("social").value.trim() || "Not provided";
+
+  const confirmInfo = document.getElementById("confirmInfo").checked;
+  const contactConsent = document.getElementById("contactConsent").checked;
+  const mediaConsent = document.getElementById("mediaConsent").checked;
+
+  if (!name || !age || !mobile || !city) {
+    alert("Please fill all required fields.");
+    return;
+  }
+
+  if (!confirmInfo || !contactConsent || !mediaConsent) {
+    alert("Please accept all declarations to proceed.");
+    return;
+  }
+
+  const whatsappNumber = "9844691768";
+  const locationLink = "https://maps.app.goo.gl/DUiyYujAjAiDPB279";
+
+  const message = `
+👑 *ABHARAN QUEEN 2026 – REGISTRATION* 👑
+
+👤 *Personal Details*
+Name: ${name}
+Age: ${age}
+City: ${city}
+
+📞 *Contact*
+WhatsApp: ${mobile}
+Email: ${email}
+Instagram: ${social}
+
+📍 *Audition Location*
+${locationLink}
+
+✅ *Consent*
+✔ Information confirmed
+✔ Contact permission granted
+✔ Media usage approved
+
+📸 I will now attach my photos & introduction video.
+`;
+
+  const encodedMessage = encodeURIComponent(message);
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+}
+</script>
 
 </body>
 </html>
