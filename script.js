@@ -1,3 +1,4 @@
+<script>
 function sendToWhatsApp() {
   const name = document.getElementById("name").value.trim();
   const age = document.getElementById("age").value.trim();
@@ -21,8 +22,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  const whatsappNumber = "9844691768":
-
+  const whatsappNumber = "9844691768"; // ✅ fixed
   const locationLink = "https://maps.app.goo.gl/DUiyYujAjAiDPB279";
 
   const message = `
@@ -50,12 +50,10 @@ ${locationLink}
 📸 I will now attach my photos and video.
   `;
 
-  window.open(
-    `https://api.whatsapp.com/send?phone=9844691768`,
-    "_blank"
-  );
+  const encodedMessage = encodeURIComponent(message);
+
+  const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
 }
-
-
-
-
+</script>
