@@ -38,9 +38,6 @@ WhatsApp: ${mobile}
 Email: ${email}
 Instagram: ${social}
 
-📍 *Audition Location*
-${locationLink}
-
 ✅ *Consent*
 ✔ Information confirmed
 ✔ Contact permission granted
@@ -56,5 +53,6 @@ ${locationLink}
   window.open(whatsappURL, "_blank");
 }
 </script>
+
 
 
