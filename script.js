@@ -22,7 +22,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  const whatsappNumber = "9844691768"; // ✅ fixed
+  const whatsappNumber = "7204651935"; // ✅ fixed
   const locationLink = "https://maps.app.goo.gl/DUiyYujAjAiDPB279";
 
   const message = `
@@ -57,3 +57,4 @@ ${locationLink}
   window.open(whatsappURL, "_blank");
 }
 </script>
+
