@@ -22,8 +22,7 @@ function sendToWhatsApp() {
     return;
   }
 
-  const whatsappNumber = "7204651935"; // ✅ fixed
-  const locationLink = "https://maps.app.goo.gl/DUiyYujAjAiDPB279";
+  const whatsappNumber = "7204651935"; // ✅ fixed";
 
   const message = `
 👑 *ABHARAN QUEEN 2026 – REGISTRATION* 👑
@@ -57,4 +56,5 @@ ${locationLink}
   window.open(whatsappURL, "_blank");
 }
 </script>
+
 
